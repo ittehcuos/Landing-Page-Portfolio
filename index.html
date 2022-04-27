@@ -8,38 +8,64 @@
        <link rel="stylesheet" href="style.css">
        <!--Fontawesom iconos-->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
        <!--Google font-->
        <link rel="preconnect" href="https://fonts.googleapis.com">
        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
        <title>Navbar resposive</title>
 </head>
 <body>
-       <nav >
-              <input type="checkbox" id="check"> <!--Con elcheck vamos a activar y desactivar el menu-->
-              <label for="check" class="baricon">
-                     <i class="fas fa-bars"></i>
-              </label>
-              <a href="#" class="enlace"> 
-                     <img src="./img/AntonellaDev3.png" alt="" class="logo">
-              </a>
-
-              <ul>
-                     <li class="inicio"><a href="./index.html">Inicio</a></li>
-                     <li class="servicios"><a href="#">Servicios</a></li>
-                     <li class="clientes"><a href="#">Clientes</a></li>
-                     <li class="contacto"><a href="#">Contacto</a></li>  
-              </ul>
-       </nav>
-       <section>
-              <div class="descripcion">
-                     <h1 class="titulo">FRONT-END DEVELOPER</h1>
-                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa ipsam sunt expedita asperiores quasi soluta, laudantium voluptatibus consequuntur, vel tempora ducimus iusto voluptate voluptatem porro repudiandae beatae sequi, ea neque.</p>
-              </div>
-              <a href="#" class="develop"> 
-                     <img src="./img/cohete.png" alt="" class="espacial">
-              </a>
-       </section>
-       <footer></footer>
+      <header>
+             <nav>
+                    <div class="nav">
+                           <a>
+                                  <img src="./img/AntonellaDev2.png" alt="" class="logo">
+                            </a>
+                           <input type="checkbox" name="" id="menu_desplegable">
+                           <label for="menu_desplegable"><i class="fa-solid fa-bars"></i></label>
+                           <ul class="menu">
+                                  <li ><a href="#inicio">Inicio</a></li>
+                                  <li ><a href="#sobremi">Sobre mi</a></li>
+                                  <li ><a href="#">Contacto</a></li>
+                           </ul>
+                    </div>
+             </nav>
+      </header>
+      <main>
+             <section id="inicio" class="seccioninicio">
+                    <div class="cajatexto">
+                           <h2>¡Hola!<br>Soy Antonella.</h2>
+                           <h1>Frontend developer</h1>
+                    </div>
+             </section>
+             <section id="sobremi" class="seccionsobremi"> 
+                    <div class="cajacontenedor">
+                           <div class="fondocolor">
+                                  <img src="./img/perfilsinfondo.png" alt="" class="fotomia">
+                           </div>
+                           <div class="cajatextosobremi">
+                                  <i class="fa-solid fa-quote-left"></i>
+                                  <p>Hago productos frontend solidos y escalables, pensando siempre en la mejor experiencia del usuario.</p>
+                                  <i class="fa-solid fa-quote-right"></i>
+                           </div>
+                           <div class="cajatextotecnologia">
+                                  <p>Herramientas</p>
+                                  <div class="iconos">
+                                         <a><img src="./img/html-5.png" alt=""></a>
+                                         <a><img src="./img/css-3.png" alt=""></a>
+                                         <a><img src="./img/github.png" alt=""></a>
+                                         <a><img src="./img/visual-basico (2).png" alt=""></a>
+                                         <a><img src="./img/figma.png" alt=""></a>
+                                  </div>
+                           </div>
+                    </div>
+             </section>
+      </main>
+      <footer>
+       <!--<div> Iconos diseñados por <a href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a></div>-->
+      </footer>
 </body>
 </html>

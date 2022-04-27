@@ -1,292 +1,273 @@
-/*Paleta de colores para mi portfolio*/
-/* rgb(191, 19, 99)rosa oscuro
-rgb(213, 185, 178)rosa claro
-rgb(131, 181, 209)celeste
-rgb(182, 198, 73)verde
-rgb(9, 12, 8)negro*/
-
-
-/*320px — 480px: Mobile devices
-481px — 768px: iPads, Tablets
-769px — 1024px: Small screens, laptops
-1025px — 1200px: Desktops, large screens
-1201px and more —  Extra large screens, TV*/
-
-/* CSS Reset*/
 *{
        margin: 0;
        padding: 0;
-       text-decoration: none;
-       list-style: none;
        box-sizing: border-box;
 }
-section{
-       display: flex;
-       justify-content: space-around;
-       align-items: center;
-       background-color: white;
-       font-family: 'Comfortaa', cursive;
+
+body {
+       width: 100vw;
+       max-width: 100%;
+       height: 100%;
+}
+a{
+       text-decoration: none;
+}
+li{
+       list-style: none;
+}
+main{
        width: 100%;
-       height: 100vh;
+       height: 100%;
 }
 
-div.descripcion{
+:root {
+       --azulmedio: #001D3D;
+       --azuloscuro: #000814;
+       --azulclaro: #003566;
+       --amarillooscuro: #FFC300;
+       --amaeilloclaro: #FFD60A;
+}
+
+header{
        display: flex;
-       flex-direction: column;
-       justify-content: baseline;
+       justify-content: center;
+       padding: 3rem 0 3rem 0;
+       background-color: var(--azuloscuro);
+       
+}
+
+/*  Menu  */
+nav{
+       width: 90%;
+       top: 0;
+
+}
+
+div.nav{
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
        align-items: center;
+}
+
+.logo{
+       width: 6rem;
+}
+
+/* Menu hamburguesa */
+/* apretar el baricon */
+.menu{
+       display: none;
+}
+input:checked ~ .menu{
+       display: block;
+}
+
+
+input{
+       position:relative;
+       display: none;
+}
+
+i.fa-solid.fa-bars {
+       box-sizing: border-box;
+       display: flex;
+       font-weight: 800;
+       color: white;
+       font-size: 50px;
+           
+}
+
+/* Estilo cuando el menu esta desplegado*/
+
+.menu{
+       margin-top: 0;
+       padding: 0;
+       width: 90%;
+       /*box-shadow: 0 0 20px 20px #FFC300;*/
+}
+
+li{
+       display: block;
+       background: #000814;
+       width: 100%;
+       margin: 0;
+       padding: 10px;
        text-align: center;
 }
+ a{
+       font-family: 'Rajdhani', sans-serif;
+       font-weight: 600;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+ }
 
-h1.titulo{
-       font-size: 40px;
-       font-weight: bold;
+ /* Text transform cuando hay hoover*/
+a:hover{
+       color: #FFD60A;
 }
 
-img.espacial{
-       height: 300px;
+
+
+/*  Inicio seccion inicio  */
+.seccioninicio{
+       background-color: var(--azuloscuro);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100vh;
+}
+.cajatexto{
+       width: 60%;
+       color: white;
+       margin-bottom: 17rem;
 }
 
-nav{
-       background: rgb(213, 185, 178);
-       height: 80px;
+.cajatexto h1{
+       font-family: 'Abril Fatface', cursive;
+       font-weight: 300;
+       font-size: 2.5rem;
+       text-shadow: 6px 3px  #FFC300;
+}
+.cajatexto h2{
+       font-family: 'Rajdhani', sans-serif;
+       font-weight: 700;
+       font-size: 2rem;
+}
+
+/* Fin seccion inicio*/
+
+/* Inicio seccion sobre mi*/
+
+.seccionsobremi {
+       background-color:white;
        width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       box-shadow: 0 0 40px 40px white;
 }
 
-.enlace{
-       position: absolute;
-       padding: 20px 50px; 
+.cajacontenedor{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       width: 90%;
+       margin: 1rem;
 }
 
-.logo {
+.fondocolor{
+       background-color: var(--amarillooscuro);
+       height: 14rem;
+       width: 12rem;
+       border-top-left-radius: 50%;
+       border-top-right-radius: 50%;
+       border-bottom-left-radius: 50%;
+       border-bottom-right-radius: 50%;
+       display: flex;
+       justify-content: center;
+       /*box-shadow: 0 0 10px  var(--azuloscuro);*/
+       border: solid 3px #FFC300;
+       margin-top: 3rem;
+      
+}
+
+.fondocolor img.fotomia{
+       border-bottom-left-radius: 50%;
+       border-bottom-right-radius: 50%;
+       width: 100%;
+
+}
+
+.cajatextosobremi{
+       margin-top: 5rem;
+       margin-bottom: 4rem;
+       width: 80%;
+       background-color: white;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+}
+.cajatextosobremi i.fa-solid.fa-quote-left {
+       align-self: flex-start;
+}
+
+.cajatextosobremi i.fa-solid.fa-quote-right {
+       align-self: flex-end;
+}
+
+.cajatextosobremi p{
+       align-self: center;
+       text-align: justify;
+       font-family: 'Rajdhani', sans-serif;
+       font-weight: 500;
+       font-size: 1.3rem;
+       margin: 2rem;
+}
+.cajatextotecnologia{
+       margin-top: 3rem;
+       margin-bottom: 3rem;
+       width: 90%;
+}
+
+.cajatextotecnologia p{
+       text-align: center;
+       font-family: 'Rajdhani', sans-serif;
+       font-weight: 700;
+       font-size: 1.7rem;
+       color: black;
+}
+
+.cajatextotecnologia div.iconos{
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       margin-top: 1rem;
+}
+
+.cajatextotecnologia a{
+       padding: .5rem;
+       color: var(--amarillooscuro);
+}
+
+/* Fin seccion sobre mi*/
+
+@media (min-width:1024px) {
+     /*  Inicio seccion inicio  */
+
+.cajatexto h1{
+       font-size: 3.5rem;
+}
+.cajatexto h2{
+
+       font-size: 3rem;
+}  
+
+/* Inicio seccion sobre mi*/
+
+.cajatextosobremi p{
+       font-size: 2rem;
+}
+.cajatextotecnologia{
+       margin-top: 3rem;
+       margin-bottom: 2rem;
+}
+
+.cajatextotecnologia p{
+       font-size: 2.5rem;
+
+}
+
+.cajatextotecnologia a{
+       padding: 1rem;
+       color: var(--amarillooscuro);
+}
+
+.cajatextotecnologia a img{
        height: 40px;
 }
-
-nav ul{
-       float: right; /*El elmenu se alinea al extremo derecho*/
-       margin-right: 30px;
 }
-
-nav ul li{
-       display: inline-block;
-       line-height: 80px;
-}
-
-nav ul li a{
-       color: black;
-       font-size: 18px;
-       padding: 7px 13px;
-       border-radius: 3px;
-       text-transform: uppercase;
-       font-family: 'Comfortaa', cursive;
-}
-
-li.inicio a, li a:hover{
-       background: rgb(191, 19, 99);
-       transition: .5s;
-       color: white;
-}
-
-.baricon{
-       font-size: 30px;
-       color: white;
-       float: right;
-       line-height: 80px;
-       margin-right: 40px;
-       cursor: pointer;
-       display: none;
-}
-
-#check {
-       display: none;
-}
-
-@media (max-width: 1200px){
-       nav{
-              height: 100px; 
-       }
-       nav ul{
-              line-height: 100px; /*Avisa de que la altura del contenedor es 100px*/
-       }
-       .enlace{
-           padding: 5px;
-           margin-left: 35px;
-           
-       }
-       .logo{
-              height: 80px;
-       }
-       nav ul li a{
-              font-size: 20px;
-              padding: 7px 13px;
-              border-radius: 3px;
-              text-transform: uppercase;
-       }
-       section{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-around;
-              align-items: center;
-              background-color: white;
-              font-family: 'Comfortaa', cursive;
-              width: 100%;
-              
-       }
-
-       
-       div.descripcion{
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              width: 50%;
-       }
-       
-       h1.titulo{
-              font-size: 40px;
-              font-weight: bold;
-              margin-bottom: 50px;
-       }
-       p{
-              font-size: 20px;
-       }
-       
-       img.espacial{
-              height: 300px;
-       }
-
-
-
-   }
-
-   @media (max-width: 768px){
-       nav{
-              height: 80px;
-       }
-       .enlace{
-           padding: 7px;
-           margin-left: 20px;
-       }
-       .logo{
-              height: 50px;
-       }
-      nav ul{
-              margin-right: 25px;
-              line-height: 80px;
-       }
-       nav ul li a{
-           font-size: 16px;
-           padding: 5px 4px;
-       }
-       section{
-              display: flex;
-              flex-direction: row;
-              justify-content: space-around;
-              align-items: center;
-              background-color: white;
-              font-family: 'Comfortaa', cursive;
-              width: 100%;
-              height: 100vh;
-       }
-
-       
-       div.descripcion{
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              width: 50%;
-              margin: 0 20px 20px 20px ;
-       }
-       
-       h1.titulo{
-              font-size: 30px;
-              font-weight: bold;
-              margin-bottom: 50px;
-       }
-       
-       img.espacial{
-              height: 300px;
-       }
-
-   }
-
-@media (max-width: 480px){
-       .enlace{
-              padding: 7px;
-              margin-left: 20px;
-       }
-       nav{
-              height: 80px;
-       }
-       .baricon{
-           display: block; /*Cuando tenemos pantalla chica, aparece el icono de menu, por eso se bloquea en el nav*/
-       }
-       ul{
-           position: fixed; /*lo fijamos con valores que nosotros le damos*/
-           width: 100%;
-           height: 100vh;
-           background: rgb(9, 12, 8);
-           top: 80px; /*porque lo ubicamos debajo del nav que en este momento mide 80px pero depende de esa altura*/
-           left: -100%;
-           text-align: center; /*Como se deplega en un bloque entero y es para celular lo mas practico es que esten centradas*/
-           transition: all .5s;
-       }
-       nav ul li{
-           display: block;
-           margin: 50px 0; /*Es paradejar las palabras espaciadas*/
-           line-height: 30px; /*Especifica la altura para un altura.*/
-       }
-       nav ul li a{
-           font-size: 20px;
-           color: rgb(213, 185, 178);
-       }
-       li a:hover, li.inicio a{
-           background: none;
-           color: rgb(191, 19, 99); /*Para el li.inicio siempre de color rosa y para las palabraspor las que pasemos el cursor.*/
-       }
-       #check:checked ~ ul{
-              /*Cuando el valor del atributo type es checkbox, la presencia de checked, atributo booleano indica que el control se selecciona de forma predeterminada; de lo contrario, se ignora. Por eso cuando checkemos el menu se desplega si no no.*/
-              left:0;
-              /*El combinador ~ separa dos selectores y selecciona el segundo elemento sólo si está precedido por el primero y ambos comparten un padre común.*/
-       }   
-       section{
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              background-color: white;
-              font-family: 'Comfortaa', cursive;
-              width: 100%;
-              height: 100vh;
-       }
-
-       
-       h1.titulo{
-              font-size: 25px;
-              margin-bottom: 10px;
-              font-weight: bold;
-       }
-
-
-       p{
-              font-size: 15px;
-       }
-       
-       img.espacial{
-              height: 200px;
-       }
-
-       div.descripcion{
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              margin: 0px 25px 25px 25px;
-              width: 70%;
-       }
-       
-       }
