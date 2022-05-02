@@ -31,65 +31,78 @@ main{
 header{
        display: flex;
        justify-content: center;
-       padding: 3rem 0 3rem 0;
        background-color: var(--azuloscuro);
+       
        
 }
 
 /*  Menu  */
 nav{
-       width: 90%;
+       width: 100%;
+       height: 180px;
        top: 0;
-
+       background: var(--azuloscuro);
+       z-index: 100;
 }
 
 div.nav{
+       width: 100%;
        display: flex;
        flex-direction: row;
-       justify-content: space-between;
+       justify-content: space-around;
        align-items: center;
+       padding-top: 3rem;
 }
 
 .logo{
        width: 6rem;
 }
 
+/* Menu desplegable cuando hago hoover sobre el mismo*/
+nav:hover{
+
+       }
+
 /* Menu hamburguesa */
 /* apretar el baricon */
-.menu{
+ul.menu{
        display: none;
 }
-input:checked ~ .menu{
+input:checked ~ ul.menu{
        display: block;
 }
 
 
 input{
-       position:relative;
+       
        display: none;
 }
 
 i.fa-solid.fa-bars {
        box-sizing: border-box;
-       display: flex;
+       position: fixed;
        font-weight: 800;
        color: white;
        font-size: 50px;
-           
+ 
 }
 
 /* Estilo cuando el menu esta desplegado*/
 
-.menu{
+ul.menu{
        margin-top: 0;
        padding: 0;
-       width: 90%;
+       float:left;
+       position: fixed;
+       width: 100%;
+       top: 180px;
+
        /*box-shadow: 0 0 20px 20px #FFC300;*/
 }
 
 li{
        display: block;
-       background: #000814;
+       background: #0008143d;
        width: 100%;
        margin: 0;
        padding: 10px;
@@ -108,7 +121,11 @@ a:hover{
        color: #FFD60A;
 }
 
-
+/*Posicionar el main descontanto la altura del nav*/
+main{
+       position: relative;
+       /*top:180px;*/
+}
 
 /*  Inicio seccion inicio  */
 .seccioninicio{
@@ -121,7 +138,7 @@ a:hover{
 .cajatexto{
        width: 60%;
        color: white;
-       margin-bottom: 17rem;
+       margin-bottom: 15rem;
 }
 
 .cajatexto h1{
@@ -156,7 +173,8 @@ a:hover{
        justify-content: center;
        align-items: center;
        width: 90%;
-       margin: 1rem;
+
+       margin-top: 10rem;
 }
 
 .fondocolor{
@@ -239,8 +257,13 @@ a:hover{
 @media (min-width:1024px) {
      /*  Inicio seccion inicio  */
 
+.cajatexto{
+       width: 60%;
+
+}
+
 .cajatexto h1{
-       font-size: 3.5rem;
+       font-size: 6rem;
 }
 .cajatexto h2{
 
@@ -270,4 +293,91 @@ a:hover{
 .cajatextotecnologia a img{
        height: 40px;
 }
+}
+
+@media (min-width:2560px) {
+/*Inicio del nav y menu*/
+.logo{
+       width: 8rem;
+}
+i.fa-solid.fa-bars {
+       font-size: 60px;
+ 
+}
+/*Fin nav*/
+
+/*  Menu desplegado, items  */
+ a{
+       font-size: 50px;
+ }
+
+/*  Inicio seccion inicio  */
+
+.cajatexto{
+       width: 60%;
+
+}
+
+.cajatexto h1{
+       font-size: 8rem;
+}
+.cajatexto h2{
+
+       font-size: 4rem;
+} 
+/* Fin secccion inicio */ 
+
+/* Inicio seccion sobre mi*/
+
+.seccionsobremi {
+       height: 100vh;
+}
+
+.cajacontenedor{
+       flex-direction: row-reverse;
+       flex-wrap: wrap;
+       justify-content:space-around;
+}
+
+/* Imagen mia con foto amarillo */
+.fondocolor{
+       background-color: var(--amarillooscuro);
+       height: 28rem;
+       width: 26rem;      
+}
+
+.cajatextosobremi{
+       width: 50%;
+}
+
+/*  Inicio iconos son las comillas   */
+.cajatextosobremi i.fa-solid.fa-quote-left {
+       font-size: 40px;
+}
+
+.cajatextosobremi i.fa-solid.fa-quote-right {
+       font-size: 40px;
+}
+/*  Fin iconos de las comillas    */
+
+.cajatextosobremi p{
+       font-size:3rem;
+
+}
+
+.cajatextotecnologia p{
+       font-size: 3rem;
+       color: var(--azuloscuro);
+}
+
+.cajatextotecnologia a{
+       padding: 1rem;
+       color: var(--amarillooscuro);
+}
+/* Modifico el taaño de los iconos herramientas, que estan como img y no como i   */
+.cajatextotecnologia a img{
+       height: 77px; 
+}
+
+/* Fin seccion sobre mi*/
 }
